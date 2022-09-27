@@ -402,7 +402,7 @@
         <template #header>
           <span>{{edit.model.cls_id === 0? "班级新增" : "班级信息修改"}}</span>
         </template>
-        <el-form ref="formRef" :model="edit.model" :rules="rules" status-icon label-width="120px" :validate="change">
+        <el-form ref="formRef" :model="edit.model" :rules="rules" status-icon label-width="120px" >
           <el-form-item label="班级名称：" prop="cls_name">
             <el-input placeholder="请输入班级名称"
                       v-model="edit.model.cls_name"></el-input>

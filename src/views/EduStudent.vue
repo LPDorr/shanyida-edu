@@ -370,7 +370,7 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
         <el-form-item label="所在班级：" style="margin-right: 10px">
           <el-select v-model="studentModel.stu_cls_id" @change="getData()">
             <el-option :value="0" label="- 请选择 -"></el-option>
-            <el-option :value="null" label="- 无教室 -"></el-option>
+            <el-option :value="0" label="- 无教室 -"></el-option>
             <el-option v-for="item in classList"
                        :value="item.cls_id"
                        :label="item.cls_name"

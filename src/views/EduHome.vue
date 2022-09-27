@@ -5,7 +5,6 @@
   import {nextTick, onMounted, watch, onBeforeMount, ref } from 'vue';
   import { useRouter } from "vue-router";
   import {ElMessage, ElMessageBox} from "element-plus";
-  import { L2Dwidget } from 'live2d-widget';
 
   const router = useRouter();
   const useAhtu = useAuthStore();
@@ -20,44 +19,7 @@
       useDashboard.getMenu();
     }catch (e: any) {}
 
-   window.WIDGET = {
-      "CONFIG": {
-        "modules": "01234",
-        "background": "4",
-        "tmpColor": "FFFFFF",
-        "tmpSize": "16",
-        "cityColor": "FFFFFF",
-        "citySize": "16",
-        "aqiColor": "FFFFFF",
-        "aqiSize": "16",
-        "weatherIconSize": "24",
-        "alertIconSize": "18",
-        "padding": "10px 10px 10px 20px",
-        "shadow": "0",
-        "language": "auto",
-        "fixed": "false",
-        "vertical": "top",
-        "horizontal": "left",
-        "key": "5c08c167e3df496ea8c4d8f99ff66b43"
-      }
-    }
-    let script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.src = 'https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0'
-    document.getElementsByTagName('head')[0].appendChild(script);
-    // 动图
-    L2Dwidget.init({
-      "model": {
-        jsonPath:
-            "https://cdn.jsdelivr.net/gh/wangsrGit119/wangsr-image-bucket/L2Dwidget/live2d-widget-model-haruto/assets/haruto.model.json",
-        "scale": 1
-      },
-      "display": {
-        "position": "left", "width": 200, "height": 300,
-        "hOffset": 0, "vOffset": 20
-      }, "mobile": {"show": true, "scale": 0.5},
-      "react": {"opacityDefault": 0.8, "opacityOnHover": 0.1}
-    });
+
   });
 
   const logout = async () => {
